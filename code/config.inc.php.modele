@@ -1,0 +1,33 @@
+<?php
+
+require_once CHEMIN_LIB_PARTAGEE . 'oowiki/coeur.inc.php';
+CConfig::$chemin_zf = CHEMIN_ZF . '1.11.11/';
+CConfig::$db_host = 'localhost';
+CConfig::$db_login = 'root';
+CConfig::$db_password = '';
+CConfig::$db_name = 'oowiki';
+CConfig::$http_login = 'cedric';
+CConfig::$http_password = 'dejachi';
+CConfig::$urlBase = '';
+CCoeur::Init();
+
+class CConfigCarto
+{
+        static $sDestinatairesAlertes = 'infosadminrobots@epiconcept.fr';
+        static $aComptes = array();
+
+        static $vsphere_url = '127.0.0.1:8443';
+        static $vsphere_urlfolders = '/folder?dcPath=PA3';
+        static $vsphere_login = 'epiconcept_read';
+        static $vsphere_password = 'xxx';
+
+        static $proxmox_url = 'proxmox3.charenton.tld:8006';
+        static $proxmox_login = 'root';
+        static $proxmox_password = '47b03';
+}
+
+CConfigCarto::$aComptes = array(
+        'groupe-alertes-web01@epiconcept.fr' => 'xx',
+        'groupe-alertes-web02@epiconcept.fr' => 'xx',
+        'groupe-alertes-web03@epiconcept.fr' => 'xx',
+);
